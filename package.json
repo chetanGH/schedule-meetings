@@ -1,0 +1,28 @@
+{
+  "name": "schedule-meetings",
+  "version": "1.0.0",
+  "description": "Nodejs application to schedule meeting for people within specific chat rooms.",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongodb": "^4.1.1",
+    "mongoose": "^6.0.0",
+    "underscore": "^1.13.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chetanGH/schedule-meetings.git"
+  },
+  "author": "Chetan Hebsur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chetanGH/schedule-meetings/issues"
+  },
+  "homepage": "https://github.com/chetanGH/schedule-meetings#readme"
+}
