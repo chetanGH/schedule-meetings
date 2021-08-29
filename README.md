@@ -7,9 +7,16 @@ This project uses the following environment variables:
 | ----------------------------- | ------------------------------------| -----------------------------------------------|
 |       CORS                    | Cors accepted values                | "*"                                            |
 
+## [Features](#features)
+
+<!-- FEATURES:START -->
+- **NoSQL database**: [MongoDB](https://www.mongodb.com/) object data modeling using [Mongoose](https://mongoosejs.com/)
+- **Express** : [ExpressJs](http://expressjs.com/) framework based on nodejs
+- **CORS**: Cross-Origin Resource-Sharing enabled using [cors](https://github.com/expressjs/cors)
+<!-- FEATURES:END -->
 
 # Pre-requisites
-- Install [Node.js](https://nodejs.org/en/) version 8.0.0
+- Install [Node.js](https://nodejs.org/en/) version LTS
 
 
 # Getting started
@@ -23,7 +30,7 @@ cd schedule-meetings
 npm install
 
 ```
-- Build and run the project
+- Run the project
 ```
 npm start
 ```
@@ -34,6 +41,17 @@ npm start
   swagger Endpoint : http://localhost:3000/api-docs 
 
 
+## [API Documentation](#api-documentation)
+
+To view all APIs and learn all the details required for the requests and responses, run the server and go to http://localhost:3000/api-docs/ in your browser. [Swagger](https://swagger.io/) automatically creates this page by using the definitions and descriptions written as comments in the required files.
+
+### API Endpoints
+
+List of available routes:  
+  
+**Routes**:
+- Creating Basic Meeting - POST /api/basicMeeting
+- Creating Advanced Meeting - POST /api/createAdvancedMeeting
 ## Project Structure
 The folder structure of this app is explained below:
 
@@ -48,9 +66,11 @@ The folder structure of this app is explained below:
 | package.json             | Contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped) | 
 
 ### Running the app
-All the different build steps are orchestrated via [npm scripts](https://docs.npmjs.com/misc/scripts).
 Npm scripts basically allow us to call (and chain) terminal commands via npm.
 
 | Npm Script | Description  |
 | ------------------------- | ------------------------------------------------------------------------------------------------- |
 | `start`                   | Runs full build and runs node on  index.js. Can be invoked with `npm start`                       |
+
+
+**THANK YOU!**

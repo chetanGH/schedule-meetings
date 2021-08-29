@@ -47,5 +47,4 @@ app.use('/api/', indexRouter);
 
 app.listen(3000,()=>{
     console.log("Server has been started at",3000)
-    console.log(new Date())
 })
