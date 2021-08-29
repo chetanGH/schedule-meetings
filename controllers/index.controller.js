@@ -121,7 +121,7 @@ module.exports.basicMeeting = async(req,res)=>{
         if(moment(from).isValid() == true && moment(to).isValid() == true && moment(event_date).isValid() == true){
 
             let members = participants.split(',');
-            if(members.length > 1){
+            if(members.length >= 1 && members!=""){
                 meetingSchema.find({
                         'from':{
                             $gte:new Date(moment.utc(from)),
