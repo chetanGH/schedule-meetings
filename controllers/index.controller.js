@@ -18,9 +18,10 @@ const existingParticipants = async(a, b)=> {
 module.exports.createNewMeeting = async(req,res)=>{
     try {
         const { RoomId,participants,event_date,from,to } = req.body;
-        if(!RoomId && !participants && !event_date && !from && !to){
+        if(!RoomId || !participants || !event_date || !from || !to){
             return res.status(400).send({success:false,message:'Bad Request.'});
         }
+        
         if(!ExistingRooms.includes(RoomId)){
             return res.status(404).send({success:false,message:"Room isn\'t available."})
         }
@@ -112,7 +113,7 @@ module.exports.basicMeeting = async(req,res)=>{
     try {
         
         let { RoomId,participants,event_date,from,to } = req.body;
-        if(!RoomId && !participants && !event_date && !from && !to){
+        if(!RoomId || !participants || !event_date || !from || !to){
             return res.status(400).send({success:false,message:'Bad Request.'});
         }
         if(!ExistingRooms.includes(RoomId)){
