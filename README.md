@@ -23,6 +23,7 @@ This project uses the following environment variables:
 
 # Pre-requisites
 - Install [Node.js](https://nodejs.org/en/) version LTS
+- Install [mongodb] mongodb in your local and add it to System Environment.
 
 
 # Getting started
@@ -36,6 +37,19 @@ cd schedule-meetings
 npm install
 
 ```
+- Run mongodb server, open Command Prompt
+```
+mongod
+```
+- above command will start the mongodb server
+- Next, run the mongodb client, if you want to perform queries and check the collection and databases. Reference(https://zellwk.com/blog/local-mongodb/).
+- Open command prompt and run:
+```
+mongo
+```
+
+- In case, if you already have connection string of external mongodb servers like Atlas etc, You can replace the db_url with YOUR database URL value, in index.js file.  
+
 - Run the project
 ```
 npm start
