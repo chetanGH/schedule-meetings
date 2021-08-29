@@ -1,4 +1,4 @@
-const { userSchema,meetingSchema } = require('../models/user.model');
+const { meetingSchema } = require('../models/user.model');
 const moment = require('moment');
 const _ = require('underscore');
 const ExistingRooms = ["R1","R2","R3","R4","R5"]
@@ -64,7 +64,7 @@ module.exports.createNewMeeting = async(req,res)=>{
                     }else{
                         let members = _.flatten(_.pluck(exists,'participants'));
                         let getParticipantsAvailability = await existingParticipants(members,membersArr);
-                        
+
                         if(getParticipantsAvailability.length == 0){
                             let newMeeting = new meetingSchema({
                                 'participants':membersArr,

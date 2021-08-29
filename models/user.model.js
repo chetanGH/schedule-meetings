@@ -1,18 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    name:{
-        type:String,
-        lowercase:true
-    },
-    status:{
-        type:String,
-        enum:['Available','Busy']
-    }
-})
-userSchema.set('timestamps',true);
-
 const meetingSchema = new Schema({
     RoomId:{
         type:String,
@@ -33,5 +21,4 @@ const meetingSchema = new Schema({
 })
 meetingSchema.set('timestamps',true);
 
-exports.userSchema = mongoose.model('userSchema',userSchema,'users');
 exports.meetingSchema = mongoose.model('meetingSchema',meetingSchema,'meetings');
