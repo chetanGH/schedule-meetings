@@ -110,11 +110,6 @@ module.exports.createNewMeeting = async(req,res)=>{
  * */ 
 module.exports.basicMeeting = async(req,res)=>{
     try {
-        console.log(`
-            from:${moment.utc(req.body.from)},
-            to:${moment.utc(req.body.to)}
-        
-        `)
         
         let { RoomId,participants,event_date,from,to } = req.body;
         if(!RoomId && !participants && !event_date && !from && !to){

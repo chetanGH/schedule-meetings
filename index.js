@@ -42,6 +42,7 @@ app.use(cors({
     "preflightContinue": false,
     "optionsSuccessStatus": 204
   }))
+app.use('/', express.static('dist/schedule-app'));
 app.use('/api/', indexRouter);
 
 
