@@ -1,5 +1,10 @@
 # schedule-meetings
 Nodejs application to schedule meeting for people within specific chat rooms.
+
+# Types of meetings
+- **BasicMeeting** : ROOMS[R1,R2,R3,R4,R5], PEOPLE[P1,P2,P3,P4,P5]  are only available resources to schedule meeting, overlapping of scheduled meetings Rooms are detected.
+- **AdvanceMeeting** : ROOMS[R1,R2,R3,R4,R5], PEOPLE[P1,P2,P3,P4,P5]  are only available resources to schedule meeting, overlapping of resources are detecting and handled properly.
+
 # Environment vars
 This project uses the following environment variables:
 
