@@ -63,6 +63,7 @@ The folder structure of this app is explained below:
 
 | Name | Description |
 | ------------------------ | -------------------------------------------------------------------------------------------------|
+| **dist**                 | Folder contains Angular static build files to render UserInterface[More Info](https://github.com/chetanGH/MeetingSchedule-Client) |
 | **node_modules**         | Contains all  npm dependencies                                                                   |
 | **docs**                 | Contains  contract.json file, which includes API documentation                                   |
 | **controllers**          | Controllers define functions to serve various express routes.                                    |
