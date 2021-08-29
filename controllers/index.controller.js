@@ -26,7 +26,7 @@ module.exports.createNewMeeting = async(req,res)=>{
         }
         if(moment(from).isValid() == true && moment(to).isValid() == true && moment(event_date).isValid() == true){
             const membersArr = participants.split(',');
-            if(members.length >= 1 && members!=""){
+            if(membersArr.length >= 1 && membersArr!=""){
                 meetingSchema.find({
                     'from':{
                         $gte:new Date(moment.utc(from)),
