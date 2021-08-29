@@ -9,6 +9,7 @@
     "moment": "^2.29.1",
     "mongodb": "^4.1.1",
     "mongoose": "^6.0.0",
+    "swagger-ui-express": "^4.1.6",
     "underscore": "^1.13.1"
   },
   "scripts": {

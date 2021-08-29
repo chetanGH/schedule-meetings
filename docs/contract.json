@@ -1,0 +1,170 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "Schedule Meeting API documentation",
+      "version": "1.0.0",
+      "title": "Schedule-Meeting",
+      "termsOfService": "http://localhost:3000",
+      "contact": {
+        "email": "apiteam@domain.com"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/api/",
+    "tags": [
+      {
+        "name": "Meetings",
+        "description": "Operations about meetings"
+      }
+    ],
+    "schemes": [
+      "http",
+      "https"
+    ],
+    "paths": {
+      "/basicMeeting":{
+        "post": {
+          "tags": [
+            "Meetings"
+          ],
+          "summary": "Create New Basic Meeting in Rooms (R1,R2,R3,R4,R5)",
+          "description": "Creating new basic meeting in available room.",
+          "operationId": "basicMeeting",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "To create basic meeting, form post must contains the below mentioned attributes in request body.",
+              "required": true,
+              "schema": {
+                "type":"object",
+                "properties": {
+                  "RoomId":{
+                    "type":"string",
+                    "example":"R1",
+                    "enum":["R1","R2","R3","R4","R5"]
+                  },
+                  "participants":{
+                      "type":"string",
+                      "example":"P1,P2"
+                  },
+                  "event_date": {
+                    "type":"string",
+                    "example":"2021-08-26T00:00:00.000Z"
+                  },
+                  "from": {
+                    "type": "string",
+                    "example": "2021-08-26T08:30:04.445Z"
+                  },
+                  "to":{
+                    "type": "string",
+                    "example": "2021-08-26T08:50:04.445Z"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "400": {
+              "description": "Bad request"
+            },
+            "405": {
+              "description": "Atleast 2 members are required to create meeting."
+            },
+            "200":{
+              "description":"Room is busy wih meeting, you can try next Room."
+            },
+            "201":{
+                "description":"Meeting has been created."
+            },
+            "500":{
+                "description":"Internal server Error."                
+            },
+            "404":{
+                "description":"Room isn't available."                
+            }
+          }
+        }
+      },
+      "/createAdvancedMeeting":{
+        "post": {
+          "tags": [
+            "Meetings"
+          ],
+          "summary": "Create New advanced Meeting in Rooms (R1,R2,R3,R4,R5) for People (P1,P2,P3,P4,P5)",
+          "description": "Creating new advanced meeting in available room.",
+          "operationId": "advancedMeeting",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "To create advanced meeting, form post must contains the below mentioned attributes in request body.",
+              "required": true,
+              "schema": {
+                "type":"object",
+                "properties": {
+                  "RoomId":{
+                    "type":"string",
+                    "example":"R1",
+                    "enum":["R1","R2","R3","R4","R5"]
+                  },
+                  "participants":{
+                      "type":"string",
+                      "example":"P1,P2"
+                  },
+                  "event_date": {
+                    "type":"string",
+                    "example":"2021-08-26T00:00:00.000Z"
+                  },
+                  "from": {
+                    "type": "string",
+                    "example": "2021-08-26T08:30:04.445Z"
+                  },
+                  "to":{
+                    "type": "string",
+                    "example": "2021-08-26T08:50:04.445Z"
+                  }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "400": {
+              "description": "Bad request"
+            },
+            "405": {
+              "description": "Atleast 2 members are required to create meeting."
+            },
+            "200":{
+              "description":"Room is busy wih meeting, you can try next Room."
+            },
+            "201":{
+                "description":"Meeting has been created."
+            },
+            "500":{
+                "description":"Internal server Error."                
+            },
+            "404":{
+                "description":"Room isn't available."                
+            }
+          }
+        }
+      }
+    }
+  }
