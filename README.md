@@ -18,7 +18,7 @@ This project uses the following environment variables:
 - **NoSQL database**: [MongoDB](https://www.mongodb.com/) object data modeling using [Mongoose](https://mongoosejs.com/)
 - **Express** : [ExpressJs](http://expressjs.com/) framework based on nodejs
 - **CORS**: Cross-Origin Resource-Sharing enabled using [cors](https://github.com/expressjs/cors)
-- **moment** [MomentJS](https://momentjs.com/) data manuplation library.
+- **moment** [MomentJS](https://momentjs.com/) date manuplation library.
 <!-- FEATURES:END -->
 
 # Pre-requisites
